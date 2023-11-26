@@ -20,5 +20,34 @@ final gStateProvider = AutoDisposeProvider<String>.internal(
 );
 
 typedef GStateRef = AutoDisposeProviderRef<String>;
+String _$gStateFutureHash() => r'60bcec0c5c965b0d1fbcc1909268c09f6695357c';
+
+/// See also [gStateFuture].
+@ProviderFor(gStateFuture)
+final gStateFutureProvider = AutoDisposeFutureProvider<int>.internal(
+  gStateFuture,
+  name: r'gStateFutureProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$gStateFutureHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef GStateFutureRef = AutoDisposeFutureProviderRef<int>;
+String _$gStateFuture2Hash() => r'484054e1f9bdaf004b42e2ca5d5573adf30e1486';
+
+/// See also [gStateFuture2].
+@ProviderFor(gStateFuture2)
+final gStateFuture2Provider = FutureProvider<int>.internal(
+  gStateFuture2,
+  name: r'gStateFuture2Provider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$gStateFuture2Hash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef GStateFuture2Ref = FutureProviderRef<int>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
